@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sample.gradlemetadata">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GradleMetaData">
+        <meta-data
+            android:name="APP_DATA"
+            android:value="这是一个测试"/>
+        <meta-data
+            android:name="APP_DATE"
+            android:value="${APP_PUBLISH_DATE}"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <meta-data android:name="ACTIVITY_NAME"
+                android:value="MainActivity123"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
